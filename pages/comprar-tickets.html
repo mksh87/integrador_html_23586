@@ -84,10 +84,14 @@
 
         <div class="col-md-6">
           <input type="text" class="form-control" id="inputNombre" placeholder="Nombre" aria-label="Nombre" required>
+          <div class="valid-feedback">El nombre ingresado es correcto</div>
+          <div class="invalid-feedback">El nombre ingresado es incorrecto</div>
         </div>
         <div class="col-md-6">
           <input type="text" class="form-control" id="inputApellido" placeholder="Apellido" aria-label="Apellido"
             required>
+          <div class="valid-feedback">El apellido ingresado es correcto</div>
+          <div class="invalid-feedback">El apellido ingresado es incorrecto</div>
         </div>
         <div class="col-12">
           <input type="email" class="form-control" id="inputEmail" placeholder="Correo" aria-label="Correo" required>
@@ -95,12 +99,13 @@
 
         <div class="col-md-6">
           <label for="inputCantidad" class="form-label">Cantidad</label>
-          <input type="text" class="form-control" id="inputCantidad" placeholder="cantidad">
+          <input type="text" class="form-control" id="inputCantidad" placeholder="cantidad" required>
         </div>
         <div class="col-md-6">
           <label for="inputCategoria" class="form-label">Categoría</label>
-          <select id="inputCategoria" class="form-select">
-            <option selected>Estudiante</option>
+          <select id="inputCategoria" class="form-select" required>
+            <option value="" disabled selected hidden>Elija una categoría</option>
+            <option>Estudiante</option>
             <option>Trainee</option>
             <option>Junior</option>
             <option>General</option>
